@@ -1,0 +1,26 @@
+<!-- FILE: terminal.css -->
+body {
+background: black;
+color: #00ff88;
+font-family: "Courier New", monospace;
+}
+
+
+.terminal {
+width: 80%;
+margin: 10% auto;
+}
+
+
+.error {
+color: red;
+}
+
+
+input, button {
+background: black;
+color: #00ff88;
+border: 1px solid #00ff88;
+font-family: inherit;
+padding: 0.5rem;
+}
