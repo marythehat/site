@@ -22,11 +22,7 @@ a:hover {
   opacity: 0.8;
 }
 .blink {
-  animation: blink 1.2s steps(1, start) infinite;
+  animation: blink 0.9s steps(1, start) infinite;
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.6);
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
