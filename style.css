@@ -100,3 +100,56 @@ footer {
   text-align: center;
   padding: 2rem;
 }
+
+/* ================================
+   ILLUSTRATED / PRINT EFFECTS
+   ================================ */
+
+/* ---- INK OUTLINES ---- */
+
+header,
+.blog,
+.promo,
+article {
+  outline: 3px solid #1f2a2e;
+  outline-offset: -3px;
+}
+
+/* ---- HALFTONE OVERLAY ---- */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(#000 12%, transparent 13%);
+  background-size: 4px 4px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ---- PRINT MISREGISTRATION ---- */
+
+header h1 {
+  position: relative;
+}
+
+header h1::before,
+header h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+
+header h1::before {
+  color: #f4c95d;
+  transform: translate(2px, 1px);
+}
+
+header h1::after {
+  color: #2a7f9e;
+  transform: translate(-2px, -1px);
+}
