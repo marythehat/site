@@ -1,9 +1,16 @@
+/* ================================
+   Dr. Z’s Automated Kitchen
+   Retro-Futurist Cover Styling
+   ================================ */
+
 body {
   background: #fdfcf8;
   color: #1f2a2e;
   font-family: "Georgia", serif;
   margin: 0;
 }
+
+/* ---------- HEADER ---------- */
 
 header {
   background: linear-gradient(135deg, #ff6f59, #f4c95d);
@@ -21,6 +28,8 @@ header h1 {
   font-style: italic;
   opacity: 0.9;
 }
+
+/* ---------- MAIN BLOG ---------- */
 
 .blog {
   max-width: 750px;
@@ -42,12 +51,16 @@ article h2 {
   color: #888;
 }
 
+/* ---------- PROMO BOX ---------- */
+
 .promo {
   background: #e6f2f5;
   border-left: 6px solid #2a7f9e;
   padding: 1rem 1.5rem;
   font-size: 0.95rem;
 }
+
+/* ---------- FOOTER ---------- */
 
 footer {
   background: #1f2a2e;
