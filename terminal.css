@@ -36,3 +36,18 @@ a:hover {
     opacity: 0;
   }
 }
+#status.blind {
+  color: red;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+  animation: none;
+}
+
+input {
+  background: black;
+  border: 1px solid #39ff14;
+  color: #39ff14;
+  font-family: inherit;
+  padding: 0.5rem;
+  width: 220px;
+  text-align: center;
+}
