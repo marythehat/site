@@ -18,5 +18,18 @@
 
 <!-- images can be hidden here -->
 </div>
+  <script>
+  const dateElement = document.getElementById("real-date");
+  const today = new Date();
+
+  const formattedDate = today.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  dateElement.textContent = "> DATE: " + formattedDate;
+</script>
+
 </body>
 </html>
