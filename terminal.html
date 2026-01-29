@@ -16,6 +16,35 @@
   <input id="password" type="password" autofocus>
 </div>
 
+    <script>
+  const status = document.getElementById("status");
+  const passwordArea = document.getElementById("password-area");
+  const passwordInput = document.getElementById("password");
+
+  const CORRECT_PASSWORD = "Z-1963-NULL"; // CHANGE THIS
+
+  // After 10 minutes → BLIND
+  setTimeout(() => {
+    status.textContent = "BLIND";
+    status.classList.remove("blink");
+    status.classList.add("blind");
+  }, 600000); // 10 minutes
+
+  // After 11 minutes → show password
+  setTimeout(() => {
+    passwordArea.style.display = "block";
+  }, 660000); // 11 minutes
+
+  // Password check
+  passwordInput?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      if (passwordInput.value === CORRECT_PASSWORD) {
+        window.location.href = "archive.html"; // or new page
+      }
+    }
+  });
+</script>
+
 
 </body>
 </html>
