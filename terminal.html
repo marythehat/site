@@ -1,35 +1,16 @@
-<!-- FILE: terminal.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>ARCHIVE ACCESS</title>
-<link rel="stylesheet" href="terminal.css">
+  <title>SYSTEM ACCESS</title>
+  <link rel="stylesheet" href="terminal.css">
 </head>
 <body>
-<div class="terminal">
-<p>> ARCHIVE STATUS: <span class="error">UNSTABLE</span></p>
-<p>> DR. Z LOGS PARTIALLY RECOVERED</p>
-<p>> ENTER CREDENTIAL:</p>
 
+  <div class="terminal">
+    <p>DR. Z INDUSTRIES — INTERNAL SYSTEM</p>
+    <p>ACCESS LOG: 04.17.63</p>
+    <p>STATUS: MONITORING</p>
+  </div>
 
-<input type="password" id="pass" placeholder="PASSWORD" />
-<button onclick="check()">ENTER</button>
-
-
-<p id="response"></p>
-</div>
-
-
-<script>
-function check() {
-const p = document.getElementById("pass").value;
-if (p === "HARMONY") {
-window.location.href = "archive.html";
-} else {
-document.getElementById("response").innerText = "> ACCESS DENIED";
-}
-}
-</script>
 </body>
 </html>
