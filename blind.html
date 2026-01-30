@@ -32,5 +32,21 @@
     <!-- Hidden clue -->
     <!-- CHECK THE ARCHIVE DATES -->
   </div>
+
+<audio id="hum" loop>
+  <source src="ambient-hum.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const hum = document.getElementById("hum");
+
+  // Browsers require interaction before sound
+  document.addEventListener("click", () => {
+    hum.volume = 0.3;
+    hum.play();
+  }, { once: true });
+</script>
+
+  
 </body>
 </html>
