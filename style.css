@@ -245,20 +245,18 @@ body::before {
 body::before {
   animation: scanline-drift 8s linear infinite;
 }
-/* CRT Scanlines */
-body::before {
+html::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 2147483647; /* above EVERYTHING */
 
   background: repeating-linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.15) 0px,
-    rgba(0, 0, 0, 0.15) 1px,
-    rgba(0, 0, 0, 0.0) 2px,
-    rgba(0, 0, 0, 0.0) 4px
+    rgba(0,0,0,0.18) 0px,
+    rgba(0,0,0,0.18) 1px,
+    rgba(0,0,0,0) 3px
   );
 
   animation: scanlines 0.12s linear infinite;
@@ -266,5 +264,5 @@ body::before {
 
 @keyframes scanlines {
   from { transform: translateY(0); }
-  to   { transform: translateY(4px); }
+  to   { transform: translateY(3px); }
 }
