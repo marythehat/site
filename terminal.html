@@ -50,6 +50,25 @@
   <source src="beep.mp3" type="audio/mpeg">
 </audio>
 
+<audio id="beep">
+  <source src="beep.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const beep = document.getElementById("beep");
+  const monitoring = document.getElementById("monitoring");
+
+  document.addEventListener("click", () => {
+    setInterval(() => {
+      if (!monitoring.classList.contains("off")) {
+        beep.currentTime = 0;
+        beep.volume = 0.4;
+        beep.play();
+      }
+    }, 600);
+  }, { once: true });
+</script>
+
     
 </body>
 </html>
