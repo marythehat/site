@@ -19,12 +19,15 @@ body {
   justify-content: center;
   gap: 2rem;
   padding: 1.5rem;
+
+  background: #ff6f59;
+  border-bottom: 6px solid #1f2a2e;
+
   font-weight: bold;
-
-    position: relative;
+  position: relative;
   z-index: 10;
-
 }
+
 
 .main-nav a {
   color: white;
