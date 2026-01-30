@@ -266,3 +266,8 @@ html::before {
   from { transform: translateY(0); }
   to   { transform: translateY(3px); }
 }
+/* Allow global overlays (scanlines, flicker) to appear above */
+.terminal,
+.blind {
+  z-index: auto !important;
+}
