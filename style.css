@@ -71,7 +71,7 @@ body {
 .hero::after {
   content: "";
   position: absolute;
-  inset: -60;
+  inset: -90;
   background-image:
     radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
   background-size: 6px 6px;
