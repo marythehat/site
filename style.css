@@ -172,3 +172,27 @@ header::after {
 header {
   position: relative;
 }
+header {
+  background: #ff6f59;
+  color: white;
+  min-height: 70vh; /* gives breathing room */
+  padding: 2rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .tagline {
+  margin-top: 0;
+}
