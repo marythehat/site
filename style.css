@@ -179,3 +179,20 @@ footer {
   left: 50%;
   transform: translateX(-50%);
 }
+/* Blind page flicker */
+body.blind {
+  background: black;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+}
+
+body.blind.flicker {
+  animation: blindFlicker 7s infinite;
+}
+
+@keyframes blindFlicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.15; }
+  98% { opacity: 0.6; }
+  99% { opacity: 0.3; }
+}
