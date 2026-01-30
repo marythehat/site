@@ -175,7 +175,7 @@ header {
 header {
   background: #ff6f59;
   color: white;
-  min-height: 70vh; /* gives breathing room */
+  min-height: 55vh; /* gives breathing room */
   padding: 2rem;
   position: relative;
 
