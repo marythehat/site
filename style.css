@@ -85,14 +85,6 @@ body {
   border-radius: 140px 140px 0 0;
 }
 
-.hero {
-  min-height: 90vh;
-  padding: 140px 0;
-  background-color: #ff6f5c;
-  position: relative;
-}
-
-
 /* ---------- SUN SHAPE ---------- */
 .sun {
   position: absolute;
