@@ -68,7 +68,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%) rotate(-2deg);
+  transform: translateX(-50%);
 
   width: 260px;
   height: 130px;
