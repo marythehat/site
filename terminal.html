@@ -19,11 +19,6 @@
   </div>
 </div>
 
-<!-- Beep sound -->
-<audio id="beep" preload="auto" loop>
-  <source src="748753__newlocknew__beep_old-tracking-device-signalartificialnocountryforold.mp3" type="audio/mpeg">
-</audio>
-
 <script>
 const status = document.getElementById("status");
 const passwordArea = document.getElementById("password-area");
@@ -46,10 +41,10 @@ setTimeout(() => {
   beep.pause();
 }, 600000);
 
-// After 11 minutes → password
+// After 10 minutes → password
 setTimeout(() => {
   passwordArea.style.display = "block";
-}, 660000);
+}, 600010);
 
 // Password check
 passwordInput.addEventListener("keydown", (e) => {
