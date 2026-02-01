@@ -141,3 +141,13 @@ body.blind.flicker {
   98% { opacity: 0.6; }
   99% { opacity: 0.3; }
 }
+.data-flood {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  color: #cfd3d6;
+  padding: 3rem;
+  min-height: 100vh;
+  background: radial-gradient(#0c0f14, #050608);
+}
