@@ -170,3 +170,66 @@ body.blind.flicker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-6px); }
 }
+/* GLOBAL CORRUPTION */
+.corrupt * {
+  font-family: monospace !important;
+  letter-spacing: 1.2px;
+  word-break: break-all;
+}
+
+/* SCREEN INSTABILITY */
+.corrupt {
+  background: #050608;
+  color: #e5e7eb;
+  animation: global-flicker 0.18s infinite;
+  overflow-x: hidden;
+}
+
+/* TEXT GLITCH */
+.corrupt h1,
+.corrupt h2,
+.corrupt p,
+.corrupt a {
+  text-shadow:
+    -2px 0 red,
+     2px 0 cyan;
+  transform: skew(-2deg);
+}
+
+/* NAV BREAKAGE */
+.corrupt nav {
+  position: sticky;
+  top: -10px;
+  filter: blur(0.6px);
+}
+
+/* HERO DESTRUCTION */
+.corrupt .hero {
+  transform: rotate(-1.5deg) scale(1.03);
+  filter: contrast(1.4) saturate(0.7);
+}
+
+/* EVERYTHING DRIFTS */
+.corrupt main,
+.corrupt header,
+.corrupt footer {
+  animation: drift 5s infinite alternate;
+}
+
+/* FOOTER CORRUPTION */
+.corrupt footer {
+  opacity: 0.6;
+  letter-spacing: 3px;
+}
+
+/* RANDOM FLICKER */
+@keyframes global-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.92; }
+}
+
+/* SLOW MISALIGNMENT */
+@keyframes drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-8px); }
+}
