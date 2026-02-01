@@ -142,32 +142,31 @@ body.blind.flicker {
   99% { opacity: 0.3; }
 }
 .data-flood {
-  font-family: "Courier New", monospace;
-  font-size: 14px;
-  line-height: 1.4;
-  white-space: pre-wrap;
-  color: #cfd3d6;
-  padding: 3rem;
-  min-height: 100vh;
-  background: radial-gradient(#0c0f14, #050608);
-}
-.data-flood {
   font-family: monospace;
-  font-size: 13px;
-  line-height: 1.15;
-  letter-spacing: 0.5px;
+  font-size: 18px;           /* BIG */
+  line-height: 1.05;         /* CRUSHED */
+  letter-spacing: 1px;       /* DISORIENTING */
   white-space: pre-wrap;
   word-break: break-all;
 
-  color: #d6d9dc;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      #06080c 0px,
-      #06080c 2px,
-      #070a10 3px
-    );
+  color: #e6e9ed;
+  background: #050608;
 
-  padding: 2rem;
-  min-height: 100vh;
+  padding: 4rem;
+  min-height: 200vh;         /* OVERWHELMING */
+  overflow: hidden;
+
+  animation:
+    flicker 0.12s infinite,
+    drift 6s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.94; }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-6px); }
 }
