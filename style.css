@@ -151,3 +151,23 @@ body.blind.flicker {
   min-height: 100vh;
   background: radial-gradient(#0c0f14, #050608);
 }
+.data-flood {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  white-space: pre-wrap;
+  word-break: break-all;
+
+  color: #d6d9dc;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #06080c 0px,
+      #06080c 2px,
+      #070a10 3px
+    );
+
+  padding: 2rem;
+  min-height: 100vh;
+}
