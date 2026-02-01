@@ -233,3 +233,104 @@ body.blind.flicker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-8px); }
 }
+/* =========================
+   SYSTEM FAILURE: GLOBAL
+========================= */
+
+.dying {
+  background: #040507;
+  color: #e2e4e7;
+  overflow-x: hidden;
+  animation: pulse 0.35s infinite;
+}
+
+/* EVERYTHING IS UNSTABLE */
+.dying * {
+  font-family: monospace !important;
+  word-break: break-all;
+  letter-spacing: 1.4px;
+  animation: micro-jitter 0.18s infinite;
+}
+
+/* TEXT IS BLEEDING APART */
+.dying h1,
+.dying h2,
+.dying p,
+.dying a,
+.dying li {
+  text-shadow:
+    -3px 0 rgba(255,0,0,0.7),
+     3px 0 rgba(0,255,255,0.6);
+}
+
+/* LINKS ARE STILL THERE — BARELY */
+.dying a {
+  color: #b9c1cc;
+  opacity: 0.75;
+}
+
+/* LAYOUT IS LOSING COHESION */
+.dying header,
+.dying nav,
+.dying main,
+.dying footer {
+  animation: drift-collapse 6s infinite alternate;
+  filter: blur(0.6px) contrast(1.3);
+}
+
+/* TEXT WALL OVERRIDES */
+.dying main {
+  font-size: 20px;
+  line-height: 1.02;
+  min-height: 300vh;
+  padding: 4rem;
+}
+
+/* CRT TEAR LINES */
+.dying::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  mix-blend-mode: overlay;
+  animation: scan 0.08s infinite;
+}
+
+/* RANDOM ROTATIONAL FAILURE */
+@keyframes drift-collapse {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-12px) rotate(-1.2deg);
+  }
+}
+
+/* MICRO JITTER — FEELS ALIVE */
+@keyframes micro-jitter {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 0); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(0, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* SCREEN PULSE */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.91; }
+}
+
+/* SCANLINE FLICKER */
+@keyframes scan {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.35; }
+}
