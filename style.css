@@ -334,3 +334,38 @@ body.blind.flicker {
   0% { opacity: 0.2; }
   100% { opacity: 0.35; }
 }
+.blog {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.blog p {
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.blog h2 {
+  margin: 4rem 0 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.blog strong {
+  display: block;
+  margin: 2.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #ccc;
+  font-style: italic;
+}
+.hero {
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
