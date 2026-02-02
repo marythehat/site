@@ -372,6 +372,7 @@ body.blind.flicker {
 .hero {
   padding: 3rem 2rem; /* was 6rem */
 }
-.hero {
-  padding: 3rem 2rem; /* was 6rem */
+.main-nav a {
+  font-size: 1.15rem;
+  padding: 0.5rem 0.75rem;
 }
