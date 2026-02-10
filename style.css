@@ -1,4 +1,4 @@
-/* ---------- RESET ---------- */
+
 * {
   box-sizing: border-box;
 }
@@ -12,8 +12,6 @@ body {
   background-size: 3px 3px;
   color: #1f2a2e;
 }
-
-/* ---------- NAV ---------- */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -37,7 +35,6 @@ body {
   text-decoration: underline;
 }
 
-/* ---------- HERO ---------- */
 .hero {
   background: #add8e6; /* blue middle */
   min-height: 90vh;
@@ -62,7 +59,6 @@ body {
   font-style: italic;
 }
 
-/* ---------- SUN (ONLY ONE) ---------- */
 .hero::after {
   content: "";
   position: absolute;
@@ -79,7 +75,6 @@ body {
   border-radius: 140px 140px 0 0;
 }
 
-/* ---------- MAIN CONTENT ---------- */
 .blog {
   max-width: 900px;
   margin: 8rem auto;
@@ -91,7 +86,6 @@ body {
     16px 16px 0 #f6cf65;
 }
 
-/* ---------- ARTICLES ---------- */
 article {
   border: 3px solid #1f2a2e;
   padding: 2rem;
@@ -105,7 +99,6 @@ article h2 {
   color: #2a7f9e;
 }
 
-/* ---------- FOOTER ---------- */
 footer {
   background: #2a7f9e;
   color: white;
@@ -124,7 +117,6 @@ footer {
   text-decoration: none;
 }
 
-/* ---------- BLIND PAGE ---------- */
 body.blind {
   background: black;
   color: #00ff66;
@@ -170,14 +162,13 @@ body.blind.flicker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-6px); }
 }
-/* GLOBAL CORRUPTION */
+
 .corrupt * {
   font-family: monospace !important;
   letter-spacing: 1.2px;
   word-break: break-all;
 }
 
-/* SCREEN INSTABILITY */
 .corrupt {
   background: #050608;
   color: #e5e7eb;
