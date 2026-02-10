@@ -290,6 +290,13 @@ Bake until edges are set and centers remain slightly jiggly.
 
     glitchLayer.appendChild(sprite);
   }
+   window.addEventListener("scroll", () => {
+    document.querySelectorAll(".glitch-dessert").forEach(el => {
+      el.style.opacity = 0.4 + Math.random() * 0.6;
+      el.style.transform += " translateX(2px)";
+    });
+  });
+</script>
 </script>
 
 </body>
