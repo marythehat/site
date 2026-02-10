@@ -270,6 +270,27 @@ Bake until edges are set and centers remain slightly jiggly.
   <footer>
     <p class="legal">© Dr. Z Industries</p>
   </footer>
+<script>
+  const glitchLayer = document.getElementById("glitch-layer");
+  const COUNT = 30; // increase for more chaos
+
+  for (let i = 0; i < COUNT; i++) {
+    const sprite = document.createElement("div");
+    sprite.className = "glitch-dessert";
+
+    sprite.style.left = Math.random() * 100 + "vw";
+    sprite.style.top = Math.random() * 100 + "vh";
+
+    const duration = 8 + Math.random() * 12;
+    sprite.style.animationDuration = `${duration}s, ${0.3 + Math.random()}s`;
+
+    const size = 32 + Math.random() * 32;
+    sprite.style.width = size + "px";
+    sprite.style.height = size + "px";
+
+    glitchLayer.appendChild(sprite);
+  }
+</script>
 
 </body>
 </html>
