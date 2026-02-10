@@ -367,3 +367,46 @@ body.blind.flicker {
   font-size: 1.15rem;
   padding: 0.5rem 0.75rem;
 }
+/* Glitch background container */
+#glitch-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Individual glitch sprites */
+.glitch-dessert {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url("images/yumdessert.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+  animation:
+    drift linear infinite,
+    glitch-flicker steps(2) infinite;
+  filter: contrast(1.2) saturate(1.3);
+}
+
+/* Slow drifting movement */
+@keyframes drift {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(80px, -120px) rotate(8deg);
+  }
+}
+
+/* Glitch jitter */
+@keyframes glitch-flicker {
+  0%   { filter: hue-rotate(0deg); opacity: 0.8; }
+  20%  { filter: hue-rotate(30deg); transform: translate(-2px, 1px); }
+  40%  { filter: hue-rotate(-25deg); transform: translate(3px, -2px); }
+  60%  { opacity: 0.6; }
+  80%  { filter: hue-rotate(15deg); }
+  100% { opacity: 0.85; }
+}
